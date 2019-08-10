@@ -10,9 +10,7 @@ class Current extends Component {
     getData(){
         Axios.get('https://api.coindesk.com/v1/bpi/currentprice/USD.json')
         .then(res =>{
-            
-            console.log()
-            this.setState({ value : Number(res.data.bpi.USD.rate.replace(',','')).toFixed()})
+            this.setState({ value : res.data.bpi.USD.rate_float.toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ".")})
             console.log(this.state)
         })
         .catch(err =>{
@@ -28,8 +26,9 @@ class Current extends Component {
 
     render() {
         return (<div>
-            <h3>Valor actual </h3>
-            <div>{this.state.value} USD </div>
+            <h2>Valor actual </h2>
+            <h3>${this.state.value} USD </h3>
+            <p>Valor actualizado cada minuto</p>
             </div>
         )
     }

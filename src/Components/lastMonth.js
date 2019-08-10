@@ -25,7 +25,7 @@ class LastMonth extends Component {
     render() {
         return (
             <div>
-                <h3>Último mes</h3>
+                <h2>Último mes</h2>
                 <LineChart data={this.state.monthValues} />
             </div>
         )

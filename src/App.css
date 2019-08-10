@@ -1,5 +1,7 @@
 .App{
   text-align: -webkit-center;
+  background-color: whitesmoke;
+  padding-bottom: 50px
 }
 
 .App-logo {
@@ -10,6 +12,7 @@
 }
 
 .App-header {
+  padding: 10px;
   background-color: #F89216;
   min-height: 30px;
   text-align: left;
@@ -25,6 +28,11 @@
   max-width: 90%;
   box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.06);
   border-radius: 5px;
+  background-color: white
+}
+
+p{
+  color:gray
 }
 
 .App-link {
